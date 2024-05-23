@@ -1050,11 +1050,138 @@ header nav .form i {
 .contact .cont {
     display: flex;
     justify-content: center;
-
 }
 
-/* .contact .cont form {}
+@media (max-width: 767px) {
+    .contact .cont {
+        flex-direction: column;
+    }
+}
 
-.contact .cont form .main-input {} */
+.contact .cont form {
+    flex-basis: 70%;
+}
+
+.contact .cont form .main-input {
+    padding: 20px;
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.contact .cont form .main-input:focus {
+    outline: none;
+}
+
+.contact .cont form textarea.main-input {
+    height: 200px;
+}
+
+.contact .cont form input[type="submit"] {
+    background-color: var(--main-color);
+    padding: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.contact .cont .info {
+    flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+    .contact .cont .info {
+        order: -1;
+        text-align: center;
+    }
+}
+
+.contact .cont .info h4 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact .cont .info .phone {
+    display: block;
+    line-height: 2;
+    color: var(--font-color);
+}
+
+.contact .cont .info h4:nth-of-type(2) {
+    margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+    .contact .cont .info h4:nth-of-type(2) {
+        margin-top: 40px;
+    }
+}
+
+.contact .cont .info address {
+    color: var(--font-color);
+    line-height: 2;
+}
+
+@media (max-width: 767px) {
+    .contact .cont .info address {
+        margin-bottom: 30px;
+    }
+}
 
 /* <!-- end contact --> */
+/* <!-- start footer --> */
+.footer {
+    padding-top: calc(var(--section-padding) / 2);
+    padding-bottom: calc(var(--section-padding) / 2);
+    background-image: url(/images/unsplash.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+}
+
+.footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+.footer p:not(.copyright) {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 22px;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.footer .social-icon i {
+    padding: 15px;
+}
+
+.footer .copyright {
+    margin-top: 50px;
+}
+
+.footer .copyright span {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+/* <!-- end footer --> */
